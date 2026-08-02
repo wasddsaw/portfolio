@@ -1,296 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Portfolio - Abd Qayyum Ishak</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#f5f7fb" />
+        <meta name="description" content="Abdul Qayyum Ishak is a senior mobile application developer with 8+ years of experience building Flutter, iOS, Android, and full-stack products." />
+        <meta name="author" content="Abdul Qayyum Ishak" />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Abdul Qayyum Ishak - Senior Mobile Application Developer" />
+        <meta property="og:description" content="Mobile engineering, full-stack delivery, and product leadership across Flutter, iOS, Android, and the web." />
+        <meta property="og:url" content="https://wasddsaw.github.io/portfolio/" />
+        <meta property="og:image" content="https://wasddsaw.github.io/portfolio/assets/img/profileV2.png" />
+        <meta property="og:image:alt" content="Portrait of Abdul Qayyum Ishak" />
+
+        <title>Abdul Qayyum Ishak | Senior Mobile Application Developer</title>
+        <link rel="canonical" href="https://wasddsaw.github.io/portfolio/" />
+        <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="assets/img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <script>
+            (function () {
+                document.documentElement.classList.add('js');
+                let savedTheme = null;
+                try {
+                    savedTheme = localStorage.getItem('portfolio-theme');
+                } catch (error) {
+                    savedTheme = null;
+                }
+                const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.dataset.theme = savedTheme || (systemDark ? 'dark' : 'light');
+            })();
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Abdul Qayyum Ishak",
+                "jobTitle": "Senior Mobile Application Developer",
+                "url": "https://wasddsaw.github.io/portfolio/",
+                "image": "https://wasddsaw.github.io/portfolio/assets/img/profileV2.png",
+                "email": "mailto:ayum9422@gmail.com",
+                "telephone": "+60133833895",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Puncak Alam",
+                    "addressRegion": "Selangor",
+                    "addressCountry": "MY"
+                },
+                "sameAs": [
+                    "https://linkedin.com/in/abdul-qayyum-ishak-a83aab157",
+                    "https://github.com/wasddsaw"
+                ],
+                "knowsAbout": ["Flutter", "iOS", "Android", "React Native", "Laravel", "Node.js", "Mobile Application Development"]
+            }
+        </script>
     </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Abd Qayyum Ishak</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profileV2.png" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
-                </ul>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+
+        <header class="site-header" id="site-header">
+            <div class="nav-shell">
+                <a class="brand" href="#about" aria-label="Abdul Qayyum Ishak - home">
+                    <span class="brand-mark" aria-hidden="true">AQ</span>
+                    <span class="brand-copy">
+                        <strong>Abdul Qayyum</strong>
+                        <small>Mobile engineer</small>
+                    </span>
+                </a>
+
+                <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#education">Education</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+                        <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+                        <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.6 15.5A9 9 0 0 1 8.5 3.4 9 9 0 1 0 20.6 15.5Z"></path></svg>
+                    </button>
+                    <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Abd
-                        <span class="text-primary">Qayyum</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        A-09-03, PANGSAPURI KITA IMPIAN, PERSIARAN CYBERSOUTH PERDANA, CYBERSOUTH, 43800 DENGKIL, SELANGOR · +6013-383 3895
-                        <a href="mailto:ayum9422@gmail.com">ayum9422@gmail.com</a>
-                    </div>
-                    <p class="lead mb-5">Experienced Software Engineer adept in offering cutting edge engineering solutions and effectively guiding developer teams. Bringing forth expertise in managing all aspects of the software development life cycle. Skilled in problem solving and executing software tasks from start to finish.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" target="_blank" href="https://linkedin.com/in/abdul-qayyum-ishak-a83aab157"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" target="_blank" href="https://github.com/wasddsaw"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" target="_blank" href="https://drive.google.com/file/d/1naVHTXuX4BZWN07Zm8s5TVlLIRrXCAHM/view?usp=sharing"><i class="far fa-file-pdf"></i></a>
-                        <!-- <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Senior Flutter Developer</h3>
-                            <div class="subheading mb-3">Etiqa Digital Solutions Sdn Bhd</div>
-                            <div>Leading the analysis and design system.</div>
-                            <div>Leading the development in programming for mobile applications, web applications, database, UI/UX design, and API development.</div>
-                            <div>Level 2 or level 3 support for applications.</div>
-                            <div>Resolve day-to-day production technical issues.</div>
-                            <div>Ensure completeness of SDLC deliverables and audit issues.</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2023 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineer (Mobile)</h3>
-                            <div class="subheading mb-3">Razer Merchant Services Sdn Bhd</div>
-                            <div>Development of Mobile application and scripts (which includes APIs, web reports, etc).</div>
-                            <div>Making changes (fixing or upgrading) to existing applications.</div>
-                            <div>involve systems design, development, testing, implementation, documentation and support.</div>
-                            <div>Work with other engineers to develop effort estimates and plan implementation of products, based on requirement documents.</div>
-                            <div>Analyze and improve efficiency, scalability and stability of various system resources.</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2020 - July 2023</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Software Engineer (iOS)</h3>
-                            <div class="subheading mb-3">MPay Technologies Sdn Bhd</div>
-                            <div>Translate business requirement into technical and system specifications.</div>
-                            <div>Perform application development, implementation, testing and support.</div>
-                            <div>Design and develop IT solution according to established standards and best practices.</div>
-                            <div>Produce timely and accurate project status reports.</div>
-                            <div>Provide system support of business applications and resolve problems.</div>
-                            <div>To undertake research and development in related areas.</div>
-                            <div>Ensure all system development methodologies and processes all well documented.</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2018 - March 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Internship</h3>
-                            <div class="subheading mb-3">PETRONAS DAGANGAN BHD (PDB)</div>
-                            <p>Handle project system enhancement and Order Taker.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2017 - July 2017</span></div>
+        </header>
+
+        <main id="main-content">
+            <section class="hero section-shell" id="about" aria-labelledby="hero-title">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Building mobile products in Malaysia</p>
+                    <h1 id="hero-title">I turn complex workflows into <span>mobile experiences people can trust.</span></h1>
+                    <p class="hero-intro">I’m Abdul Qayyum Ishak, a senior mobile application developer with 8+ years of experience delivering cross-platform apps, payment products, enterprise tools, and full-stack solutions.</p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#projects">View selected work <span aria-hidden="true">↘</span></a>
+                        <a class="button button-secondary" href="assets/docs/abdul-qayyum-ishak-cv-2026.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
                     </div>
 
-                    <!-- <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Web Design Intern</h3>
-                            <div class="subheading mb-3">Shout! Media Productions</div>
-                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
-                    </div> -->
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Projects-->
-            <section class="resume-section" id="projects">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
-
-                    <!-- <div class="subheading mb-3">Website</div>
-                    <ul class="fa-ul mb-3"> -->
-                        <!-- <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Laravel, Laravel Lumen</li>
-                        <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Codeigniter</li>
-                        <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Flutter, iOS, Android</li> -->
-                    <!-- </ul> -->
-
-                    <!-- <div class="subheading mb-3">Mobile</div> -->
-
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <!-- <h3 class="mb-0">Mobile</h3> -->
-                            <!-- <div class="subheading mb-3">MPay WALET</div> -->
-                            <!-- <div>Leading the analysis and design system.</div>
-                            <div>Leading the development in programming for mobile applications, web applications, database, UI/UX design, and API development.</div>
-                            <div>Level 2 or level 3 support for applications.</div>
-                            <div>Resolve day-to-day production technical issues.</div>
-                            <div>Ensure completeness of SDLC deliverables and audit issues.</div> -->
-
-                            <div class="subheading mb-3">MPay WALET</div>
-                                <ul class="fa-ul mb-3">
-                                    <li><span class="fa-li"><i class="fas fa-hand-holding"></i></span>Laravel, Laravel Lumen</li>
-                                    <li><span class="fa-li"><i class="fas fa-hand-holding"></i></span>Laravel, Laravel Lumen</li>
-                                    
-                                </ul>
-                        </div>
-                    </div>
-
-
-                    
-
-                    
-                    
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">UNIVERSITI TEKNOLOGI MARA (UITM), JASIN CAMPUS, MALACCA</h3>
-                            <div class="subheading mb-3">BACHELOR OF COMPUTER SCIENCES (HONS.) DATA COMMUNICATION & NETWORKING</div>
-                            <!-- <div>Computer Science - Web Development Track</div> -->
-                            <p>CGPA – 3.11</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2015 - 2017</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">UNIVERSITI TEKNOLOGI MARA (UITM), ARAU CAMPUS, PERLIS</h3>
-                            <div class="subheading mb-3">DIPLOMA OF COMPUTER SCIENCES</div>
-                            <p>CGPA – 3.39</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2012 - 2014</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">SMK SULTAN SALAHUDDIN ABDUL AZIZ SHAH (SMK SSAAS)</h3>
-                            <div class="subheading mb-3">SIIJIL PELAJARAN MALAYSIA</div>
-                            <p></p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2007-2011</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Framework</div>
-                    <ul class="fa-ul mb-3">
-                        <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Laravel, Laravel Lumen</li>
-                        <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Codeigniter</li>
-                        <li><span class="fa-li"><i class="fas fa-hand-point-right"></i></span>Flutter, iOS, Android</li>
-                    </ul>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="fa-ul mb-3">
-                        <li><span class="fa-li"><i class="fas fa-star"></i></span>PHP, HTML, MySQL, Dart, Objective-C, Swift, Java</li>
-                        <li><span class="fa-li"><i class="fas fa-moon"></i></span>VS Code, XCode, Android Studio, Docker, Github, Gitlab, Figma, MS Visio</li>
-                        
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
+                    <ul class="quick-links" aria-label="Contact and social links">
+                        <li><a href="mailto:ayum9422@gmail.com">ayum9422@gmail.com</a></li>
+                        <li><a href="tel:+60133833895">+60 13-383 3895</a></li>
+                        <li><a href="https://linkedin.com/in/abdul-qayyum-ishak-a83aab157" target="_blank" rel="noopener noreferrer">LinkedIn <span class="external" aria-hidden="true">↗</span></a></li>
+                        <li><a href="https://github.com/wasddsaw" target="_blank" rel="noopener noreferrer">GitHub <span class="external" aria-hidden="true">↗</span></a></li>
                     </ul>
                 </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <!-- <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+
+                <div class="hero-visual reveal" aria-label="Profile summary">
+                    <div class="portrait-wrap">
+                        <div class="portrait-grid" aria-hidden="true"></div>
+                        <picture>
+                            <source srcset="assets/img/profile-portfolio.webp" type="image/webp" />
+                            <img src="assets/img/profileV2.png" width="1000" height="1000" alt="Portrait of Abdul Qayyum Ishak" fetchpriority="high" />
+                        </picture>
+                        <span class="portrait-label">Puncak Alam, Selangor</span>
+                    </div>
+                    <div class="hero-stat hero-stat-primary">
+                        <strong>8+</strong>
+                        <span>years building and leading</span>
+                    </div>
+                    <div class="hero-stat hero-stat-secondary">
+                        <strong>iOS + Android</strong>
+                        <span>from one product mindset</span>
+                    </div>
                 </div>
             </section>
-            <hr class="m-0" /> -->
-            <!-- Awards-->
-            <!-- <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Awards & Certifications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Google Analytics Certified Developer
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            Mobile Web Specialist - Google Certification
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            2
-                            <sup>nd</sup>
-                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            1
-                            <sup>st</sup>
-                            Place - James Buchanan High School - Hackathon 2006
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                            3
-                            <sup>rd</sup>
-                            Place - James Buchanan High School - Hackathon 2005
-                        </li>
+
+            <section class="marquee" aria-label="Core technologies">
+                <div class="marquee-track">
+                    <span>Flutter</span><i aria-hidden="true"></i><span>iOS</span><i aria-hidden="true"></i><span>Android</span><i aria-hidden="true"></i><span>React Native</span><i aria-hidden="true"></i><span>Laravel</span><i aria-hidden="true"></i><span>Node.js</span><i aria-hidden="true"></i><span>Firebase</span>
+                </div>
+            </section>
+
+            <section class="content-section section-shell" id="experience" aria-labelledby="experience-title">
+                <div class="section-heading reveal">
+                    <p class="section-index">01 / Experience</p>
+                    <h2 id="experience-title">Career built across products, platforms, and teams.</h2>
+                    <p>From native iOS and payment infrastructure to Flutter-led enterprise systems, each role has added another layer to how I design and deliver software.</p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date"><time datetime="2026-05">May 2026</time> - Present</div>
+                        <div class="timeline-body">
+                            <p class="role-number">Current role</p>
+                            <h3>Senior Mobile Application Developer</h3>
+                            <p class="company">Examedia Solutions Sdn Bhd · Shah Alam</p>
+                            <p>Developing secure, high-performance mobile applications across Flutter, React Native, and native platforms while shaping requirements with product and design partners.</p>
+                            <ul class="impact-list">
+                                <li>Integrate external services, payment gateways, and APIs.</li>
+                                <li>Review code, mentor developers, and promote maintainable engineering practices.</li>
+                                <li>Optimize performance, troubleshoot production issues, and apply mobile security best practices.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date"><time datetime="2024-11">Nov 2024</time> - <time datetime="2025-05">May 2025</time></div>
+                        <div class="timeline-body">
+                            <p class="role-number">Full-stack mobile</p>
+                            <h3>Senior Full Stack Mobile Developer</h3>
+                            <p class="company">Jom Einvoice Sdn Bhd · Bukit Jalil</p>
+                            <p>Built and maintained cross-platform mobile experiences for Malaysia’s e-Invoice ecosystem, collaborating across product, design, API integration, delivery, and release workflows.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date"><time datetime="2023-08">Aug 2023</time> - <time datetime="2024-06">Jun 2024</time></div>
+                        <div class="timeline-body">
+                            <p class="role-number">Technical leadership</p>
+                            <h3>Senior Flutter Developer</h3>
+                            <p class="company">Etiqa Digital Solutions Sdn Bhd · Bangsar</p>
+                            <p>Led system analysis and development across mobile, web, database, UI/UX, and API work, while supporting production operations and SDLC audit requirements.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date"><time datetime="2020-04">Apr 2020</time> - <time datetime="2023-07">Jul 2023</time></div>
+                        <div class="timeline-body">
+                            <p class="role-number">Payments and platforms</p>
+                            <h3>Software Engineer (Mobile, iOS)</h3>
+                            <p class="company">Fiuu, formerly Razer Merchant Services · Shah Alam</p>
+                            <p>Delivered mobile applications, SDKs, APIs, and operational tools through the complete lifecycle, from design and estimation to release, support, and scalability improvements.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item reveal">
+                        <div class="timeline-date"><time datetime="2018-03">Mar 2018</time> - <time datetime="2020-03">Mar 2020</time></div>
+                        <div class="timeline-body">
+                            <p class="role-number">Native iOS</p>
+                            <h3>Software Engineer (iOS)</h3>
+                            <p class="company">MPay Technologies Sdn Bhd · Subang Jaya</p>
+                            <p>Translated business requirements into technical specifications and delivered, tested, documented, and supported native iOS financial applications.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item timeline-item-compact reveal">
+                        <div class="timeline-date"><time datetime="2017-08">Aug 2017</time> - <time datetime="2018-02">Feb 2018</time></div>
+                        <div class="timeline-body">
+                            <h3>Freelance Mobile Instructor</h3>
+                            <p class="company">UiTM Jasin, UiTM Terengganu, and UiTM Shah Alam</p>
+                            <p>Taught university students foundational mobile development concepts.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item timeline-item-compact reveal">
+                        <div class="timeline-date"><time datetime="2017-02">Feb 2017</time> - <time datetime="2017-07">Jul 2017</time></div>
+                        <div class="timeline-body">
+                            <h3>Intern</h3>
+                            <p class="company">Petronas Dagangan Berhad · Kuala Lumpur</p>
+                            <p>Supported system enhancement work and order-taking operations.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section section-shell projects-section" id="projects" aria-labelledby="projects-title">
+                <div class="section-heading reveal">
+                    <p class="section-index">02 / Selected work</p>
+                    <h2 id="projects-title">Products that move work forward.</h2>
+                    <p>A selection of enterprise, fintech, HR, inventory, and platform work across professional and freelance engagements.</p>
+                </div>
+
+                <div class="project-grid">
+                    <article class="project-card project-card-featured reveal">
+                        <div class="project-topline"><span>Enterprise HR</span><span>01</span></div>
+                        <div>
+                            <h3>CIDB HR Mobile Application</h3>
+                            <p>A secure, cloud-ready HRMS for real-time employee management, attendance, leave workflows, and enterprise integrations.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>Flutter</li><li>Firebase FCM</li><li>Express.js</li></ul>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>e-Invoicing</span><span>02</span></div>
+                        <div>
+                            <h3>Jome Mobile Application</h3>
+                            <p>A mobile platform that helps Malaysian SMEs process e-Invoices on the go, released on Google Play and the Apple App Store in January 2026.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>Flutter</li><li>Firebase</li><li>Laravel Sanctum</li></ul>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Insurance sales</span><span>03</span></div>
+                        <div>
+                            <h3>Banca EaSE</h3>
+                            <p>A Maybank sales tool for managing customer insurance journeys, including quotations, leads, new business applications, and remote submission.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>Flutter</li><li>Flutter Web</li><li>Firebase</li><li>.NET API</li></ul>
+                    </article>
+
+                    <article class="project-card project-card-featured reveal">
+                        <div class="project-topline"><span>Payment infrastructure</span><span>04</span></div>
+                        <div>
+                            <h3>Mobile XDK</h3>
+                            <p>Led a cross-platform in-app payment kit for merchant applications and expanded it with channels including Apple Pay and Touch ’n Go.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>iOS</li><li>Android</li><li>Flutter</li><li>React Native</li><li>Cordova</li></ul>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Merchant payments</span><span>05</span></div>
+                        <div>
+                            <h3>Virtual Terminal</h3>
+                            <p>An all-in-one mobile payment processor that turns a merchant’s own device into a terminal, with receipt printing and multi-store distribution.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>Flutter</li><li>Firebase FCM</li><li>Java libraries</li></ul>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-topline"><span>Connected operations</span><span>06</span></div>
+                        <div>
+                            <h3>RFID Scanner C72</h3>
+                            <p>A Flutter application integrated with a handheld C72 scanner to capture tagged products and synchronize warehouse arrivals with the server.</p>
+                        </div>
+                        <ul class="tag-list" aria-label="Technologies"><li>Flutter</li><li>RFID hardware</li><li>Inventory</li></ul>
+                    </article>
+                </div>
+
+                <details class="project-archive reveal">
+                    <summary>
+                        <span><strong>Explore the project archive</strong><small>16 additional professional and freelance builds</small></span>
+                        <span class="summary-icon" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="archive-grid">
+                        <article><span>Fiuu · 2020-2023</span><h3>Virtual Terminal APIs</h3><p>Laravel Lumen and PHP backend services supporting the Virtual Terminal mobile app.</p><ul class="tag-list"><li>Laravel Lumen</li><li>PHP</li><li>Docker</li></ul></article>
+                        <article><span>Fiuu · 2020-2023</span><h3>Parcel+ Mobile Courier</h3><p>A courier operations app for registered Razer Parcel+ logistics teams.</p><ul class="tag-list"><li>Flutter</li><li>Firebase</li></ul></article>
+                        <article><span>Fiuu · 2020-2023</span><h3>XDK Tester</h3><p>An internal application for repeatable Mobile XDK testing.</p><ul class="tag-list"><li>Flutter</li><li>Firebase</li></ul></article>
+                        <article><span>Fiuu · 2020-2023</span><h3>RMS TMS</h3><p>A terminal vendor management system for task delegation and vendor performance tracking.</p><ul class="tag-list"><li>Flutter</li><li>Firebase</li></ul></article>
+                        <article><span>MPay · 2018-2020</span><h3>MPay Wallet</h3><p>Revamped and enhanced version 3 of a Malaysian homegrown eWallet.</p><ul class="tag-list"><li>Objective-C</li><li>iOS</li><li>Firebase</li></ul></article>
+                        <article><span>MPay · 2018-2020</span><h3>Ka$h Wallet</h3><p>An eWallet for vendors, including KFC stores, revamped using Swift.</p><ul class="tag-list"><li>Swift</li><li>Objective-C</li><li>Firebase</li></ul></article>
+                        <article><span>ITBM · Apr 2025</span><h3>ITBM Web App</h3><p>An online enquiry portal for translation, courses, interpreting, and publishing services.</p><ul class="tag-list"><li>Laravel</li><li>Web</li></ul></article>
+                        <article><span>MBPJ · Mar 2025</span><h3>E-Sewa MBPJ</h3><p>A mobile application for applying to rent commercial, residential, market, and kiosk assets.</p><ul class="tag-list"><li>Flutter</li><li>Mobile</li></ul></article>
+                        <article><span>Bungkusbang · May 2024</span><h3>Bungkusbang</h3><p>An e-commerce app for managing F&amp;B stores, vendors, and customers.</p><ul class="tag-list"><li>Flutter</li><li>Firestore</li><li>Firebase Auth</li></ul></article>
+                        <article><span>Asia Padu · Mar 2024</span><h3>Padurus</h3><p>An uptime-monitoring service app for developers and infrastructure teams.</p><ul class="tag-list"><li>Flutter</li><li>Monitoring</li></ul></article>
+                        <article><span>JTM · Jan 2024</span><h3>Pantau</h3><p>A college student-attendance monitoring tool for guards and wardens.</p><ul class="tag-list"><li>Flutter</li><li>Laravel Lumen</li></ul></article>
+                        <article><span>Aizach Niaga · Oct 2023</span><h3>Seccast</h3><p>A secure group broadcast system with message tracking, maintenance, and reporting.</p><ul class="tag-list"><li>Flutter</li><li>Secure broadcast</li></ul></article>
+                        <article><span>Academic client · Feb 2023</span><h3>Lindungi</h3><p>A mobile tool designed to help identify potential hearing-loss issues.</p><ul class="tag-list"><li>Flutter</li><li>Laravel</li></ul></article>
+                        <article><span>Smart Shadow · Jan 2023</span><h3>Al-Qausar</h3><p>An e-commerce web application for online product sales.</p><ul class="tag-list"><li>Laravel</li><li>Web</li></ul></article>
+                        <article><span>Medicom · 2022</span><h3>Smart Qurban</h3><p>A web application for managing online orders around Qurban events.</p><ul class="tag-list"><li>Laravel</li><li>Web</li></ul></article>
+                        <article><span>Masjid As-Solihin · 2021</span><h3>Community Records</h3><p>A record platform for kariah communities, Friday prayer e-passes, and khairat kematian.</p><ul class="tag-list"><li>CodeIgniter</li><li>Full-stack</li></ul></article>
+                    </div>
+                </details>
+            </section>
+
+            <section class="content-section section-shell" id="skills" aria-labelledby="skills-title">
+                <div class="section-heading reveal">
+                    <p class="section-index">03 / Capabilities</p>
+                    <h2 id="skills-title">A toolkit shaped by real delivery.</h2>
+                    <p>Hands-on engineering breadth paired with the product judgment and communication needed to move cross-functional teams forward.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card skill-card-accent reveal"><span>01</span><h3>Mobile</h3><p>Flutter, iOS, Android, React Native, native frameworks, Firebase Cloud Messaging</p></article>
+                    <article class="skill-card reveal"><span>02</span><h3>Backend &amp; web</h3><p>Laravel, Lumen, CodeIgniter, Express.js, Node.js, REST APIs, MySQL</p></article>
+                    <article class="skill-card reveal"><span>03</span><h3>Languages</h3><p>Dart, Swift, Objective-C, Java, JavaScript, PHP, HTML, SQL</p></article>
+                    <article class="skill-card reveal"><span>04</span><h3>Tools</h3><p>VS Code, Xcode, Android Studio, Docker, GitHub, GitLab, Postman, Figma, MS Visio</p></article>
+                    <article class="skill-card reveal"><span>05</span><h3>Workflow</h3><p>Mobile-first design, responsive delivery, cross-browser testing, debugging, Agile, Scrum</p></article>
+                    <article class="skill-card reveal"><span>06</span><h3>Professional</h3><p>Leadership, analytical thinking, problem-solving, communication, teamwork, versatility</p></article>
+                    <article class="skill-card reveal"><span>07</span><h3>Languages spoken</h3><p>Bahasa Malaysia and English</p></article>
+                </div>
+            </section>
+
+            <section class="content-section section-shell achievements-section" id="achievements" aria-labelledby="achievements-title">
+                <div class="section-heading reveal">
+                    <p class="section-index">04 / Achievements</p>
+                    <h2 id="achievements-title">A foundation of curiosity and initiative.</h2>
+                </div>
+
+                <div class="achievement-grid">
+                    <article class="achievement-card reveal"><span class="achievement-year">2014 / 2015</span><h3>Two Dean’s Awards</h3><p>Recognized during Diploma semester 5 and Degree semester 4 at UiTM.</p></article>
+                    <article class="achievement-card reveal"><span class="achievement-year">2015 / 2016</span><h3>Cisco networking track</h3><p>Completed CCNA Routing &amp; Switching coursework and CCNP Implementing IP Switching.</p></article>
+                    <article class="achievement-card reveal"><span class="achievement-year">2015 / 2016</span><h3>Security competitions</h3><p>Placed 4th in the KICTM hacking competition and 8th among 23 universities in Hack &amp; Defense.</p></article>
+                    <article class="achievement-card reveal"><span class="achievement-year">2016</span><h3>Technopreneurship leadership</h3><p>Led the Program Technopreneurship Exposition and earned 2nd place for Best Technology Product.</p></article>
+                </div>
+
+                <details class="text-archive reveal">
+                    <summary><span>Additional achievements</span><span class="summary-icon" aria-hidden="true">+</span></summary>
+                    <ul>
+                        <li>MUET Band 3 and class representative for Degree semesters 3 and 4.</li>
+                        <li>Certificate of Completion for industrial training at Petronas Dagangan Berhad.</li>
+                        <li>C-PROM Competition participant at UiTM Arau in 2013 and 2014.</li>
+                        <li>Basketball, campus running, acoustic music, and busking competition placements.</li>
+                        <li>School awards for mathematics mentoring, uniformed service, attendance, and student activities.</li>
                     </ul>
+                </details>
+            </section>
+
+            <section class="content-section section-shell" id="education" aria-labelledby="education-title">
+                <div class="section-heading reveal">
+                    <p class="section-index">05 / Education</p>
+                    <h2 id="education-title">Where the technical journey began.</h2>
                 </div>
-            </section> -->
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+
+                <div class="education-list">
+                    <article class="education-item reveal">
+                        <time>2015 - 2017</time>
+                        <div><h3>Bachelor of Computer Sciences (Hons.)</h3><p class="education-course">Data Communication &amp; Networking</p><p>Universiti Teknologi MARA, Jasin Campus · Malacca · CGPA 3.11</p></div>
+                    </article>
+                    <article class="education-item reveal">
+                        <time>2012 - 2014</time>
+                        <div><h3>Diploma of Computer Sciences</h3><p>Universiti Teknologi MARA, Arau Campus · Perlis · CGPA 3.39</p></div>
+                    </article>
+                    <article class="education-item reveal">
+                        <time>2007 - 2011</time>
+                        <div><h3>Sijil Pelajaran Malaysia</h3><p>SMK Sultan Salahuddin Abdul Aziz Shah · Selangor</p></div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contact-section" id="contact" aria-labelledby="contact-title">
+                <div class="section-shell contact-shell reveal">
+                    <p class="section-index">06 / Let’s connect</p>
+                    <h2 id="contact-title">Have a product that deserves a thoughtful mobile experience?</h2>
+                    <p>I’m always open to discussing senior mobile roles, product collaborations, and focused freelance work.</p>
+                    <div class="contact-actions">
+                        <a class="button button-light" href="mailto:ayum9422@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+                        <a class="contact-phone" href="tel:+60133833895">+60 13-383 3895</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="section-shell footer-shell">
+                <p>© <span id="current-year">2026</span> Abdul Qayyum Ishak</p>
+                <p>Designed to stay curious. Built to stay fast.</p>
+                <a href="#about">Back to top ↑</a>
+            </div>
+        </footer>
+
+        <script src="js/scripts.js" defer></script>
     </body>
 </html>
