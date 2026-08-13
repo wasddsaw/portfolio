@@ -7,7 +7,7 @@ A lightweight, mobile-first portfolio for Abdul Qayyum Ishak, Senior Mobile Appl
 - Semantic HTML, custom CSS, and dependency-free JavaScript
 - Responsive layouts for mobile, tablet, and desktop
 - Accessible navigation, keyboard controls, and reduced-motion support
-- Light and dark themes with saved preference
+- Dark developer-focused visual system with responsive cards, timelines, and subtle motion
 - Career timeline, selected work, full project archive, skills, achievements, and education
 - Locally hosted 2026 CV and optimized profile image
 

@@ -1,58 +1,14 @@
 (() => {
     'use strict';
 
-    const root = document.documentElement;
     const body = document.body;
     const header = document.querySelector('#site-header');
     const nav = document.querySelector('#site-nav');
     const menuToggle = document.querySelector('.menu-toggle');
-    const themeToggle = document.querySelector('.theme-toggle');
-    const themeColor = document.querySelector('meta[name="theme-color"]');
     const navLinks = [...document.querySelectorAll('.site-nav a[href^="#"]')];
     const sections = navLinks
         .map((link) => document.querySelector(link.getAttribute('href')))
         .filter(Boolean);
-
-    const getStoredTheme = () => {
-        try {
-            return localStorage.getItem('portfolio-theme');
-        } catch (error) {
-            return null;
-        }
-    };
-
-    const storeTheme = (theme) => {
-        try {
-            localStorage.setItem('portfolio-theme', theme);
-        } catch (error) {
-            // The selected theme still applies for this visit when storage is unavailable.
-        }
-    };
-
-    const updateThemeControls = () => {
-        const isDark = root.dataset.theme === 'dark';
-        themeToggle?.setAttribute('aria-pressed', String(isDark));
-        themeToggle?.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-        themeToggle?.setAttribute('title', isDark ? 'Use light theme' : 'Use dark theme');
-        themeColor?.setAttribute('content', isDark ? '#07111d' : '#f5f7fb');
-    };
-
-    updateThemeControls();
-
-    themeToggle?.addEventListener('click', () => {
-        const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-        root.dataset.theme = nextTheme;
-        storeTheme(nextTheme);
-        updateThemeControls();
-    });
-
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-    systemTheme.addEventListener?.('change', (event) => {
-        if (!getStoredTheme()) {
-            root.dataset.theme = event.matches ? 'dark' : 'light';
-            updateThemeControls();
-        }
-    });
 
     const setMenuState = (isOpen) => {
         nav?.classList.toggle('is-open', isOpen);
